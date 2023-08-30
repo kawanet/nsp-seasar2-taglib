@@ -7,7 +7,7 @@
 
 - tags: `<s:form/>`, `<s:link/>` and `<s:submit/>`
 - functions: `${ f:h("abc") }` etc.
-- See [TypeScript declaration files](https://github.com/kawanet/nsp-seasar2-taglib/blob/main/types/) for API detail.
+- See [TypeScript declaration files](https://github.com/kawanet/nsp-seasar2-taglib/tree/main/types/) for API detail.
 
 ## SYNOPSIS
 
