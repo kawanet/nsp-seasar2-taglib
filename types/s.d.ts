@@ -6,16 +6,16 @@ import type {NSP} from "nsp-server-pages";
  */
 export declare namespace Seasar2S {
     type sTags = {
-        form: NSP.TagFn<S2FormTagAttr>;
-        link: NSP.TagFn<S2LinkTagAttr>;
-        submit: NSP.TagFn<S2SubmitTagAttr>;
+        form: NSP.TagFn<FormTagAttr>;
+        link: NSP.TagFn<LinkTagAttr>;
+        submit: NSP.TagFn<SubmitTagAttr>;
     };
 
     /**
      * <s:form>
      * org.seasar.struts.taglib.S2FormTag
      */
-    interface S2FormTagAttr {
+    interface FormTagAttr {
         action?: string;
         acceptCharset?: string;
         disabled?: string;
@@ -40,7 +40,7 @@ export declare namespace Seasar2S {
      * <s:link>
      * org.seasar.struts.taglib.S2LinkTag
      */
-    interface S2LinkTagAttr {
+    interface LinkTagAttr {
         accesskey?: string;
         action?: string;
         module?: string;
@@ -86,7 +86,7 @@ export declare namespace Seasar2S {
      * <s:submit>
      * org.seasar.struts.taglib.S2SubmitTag
      */
-    interface S2SubmitTagAttr {
+    interface SubmitTagAttr {
         //
         accesskey?: string;
         alt?: string;
