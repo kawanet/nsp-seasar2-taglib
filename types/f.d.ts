@@ -25,7 +25,7 @@ export declare namespace Seasar2F {
      * @example
      * ${f:h(param:info)}
      */
-    type hFn = (a: any) => string;
+    type hFn = (input: any) => string;
 
     /**
      * org.seasar.struts.taglib.S2Functions
@@ -36,7 +36,7 @@ export declare namespace Seasar2F {
      * @example
      * ${f:u(param:info)}
      */
-    type uFn = (a: string) => string;
+    type uFn = (input: string) => string;
 
     /**
      * org.seasar.struts.taglib.S2Functions
@@ -47,7 +47,7 @@ export declare namespace Seasar2F {
      * @example
      * <fmt:formatDate value="${f:date(date, 'yyyyMMdd')}" pattern="yyyy/MM/dd"/>
      */
-    type dateFn = (a: string, b: string) => Date;
+    type dateFn = (input: string, pattern: string) => Date;
 
     /**
      * org.seasar.struts.taglib.S2Functions
@@ -58,7 +58,7 @@ export declare namespace Seasar2F {
      * @example
      * <fmt:formatNumber value="${f:number(number, '####'}" pattern="#,###"/>
      */
-    type numberFn = (a: string, b: string) => number;
+    type numberFn = (input: string, pattern: string) => number;
 
     /**
      * org.seasar.struts.taglib.S2Functions
@@ -69,7 +69,7 @@ export declare namespace Seasar2F {
      * @example
      * ${f:br(f:h(textarea))}
      */
-    type brFn = (a: string) => string;
+    type brFn = (input: string) => string;
 
     /**
      * org.seasar.struts.taglib.S2Functions
@@ -80,7 +80,7 @@ export declare namespace Seasar2F {
      * @example
      * ${f:br(f:nbsp(f:h(textarea)))}
      */
-    type nbspFn = (a: string) => string;
+    type nbspFn = (input: string) => string;
 
     /**
      * org.seasar.struts.taglib.S2Functions
@@ -91,7 +91,7 @@ export declare namespace Seasar2F {
      * @example
      * <a href="${f:url(param:info)}" ...
      */
-    type urlFn = (a: string) => string;
+    type urlFn = (input: string) => string;
 
     /**
      * org.seasar.struts.taglib.S2Functions
@@ -102,5 +102,5 @@ export declare namespace Seasar2F {
      * @example
      * ${f:label(e.departmentId, deptItems, "id", "name")}
      */
-    type labelFn = (a: any, b: any[], c: string, d: string) => string;
+    type labelFn = (value: any, dataList: any[], valueName: string, labelName: string) => string;
 }
