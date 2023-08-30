@@ -1,5 +1,7 @@
 import type {NSP} from "nsp-server-pages";
 
+export declare const sTags: Seasar2S.sTags;
+
 /**
  * s
  * uri: http://sastruts.seasar.org

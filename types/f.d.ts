@@ -1,8 +1,8 @@
+export declare const fFunctions: Seasar2F.fFunctions;
+
 /**
  * f
  * uri: http://sastruts.seasar.org/functions
- *
- * JSTL 1.1 functions library
  */
 export declare namespace Seasar2F {
     type fFunctions = {
