@@ -3,7 +3,7 @@
 [![Node.js CI](https://github.com/kawanet/nsp-seasar2-taglib/workflows/Node.js%20CI/badge.svg?branch=main)](https://github.com/kawanet/nsp-seasar2-taglib/actions/)
 [![npm version](https://img.shields.io/npm/v/nsp-seasar2-taglib)](https://www.npmjs.com/package/nsp-seasar2-taglib)
 
-[NSP](https://github.com/kawanet/nsp-server-pages) taglib for Seasar2 SAStruts Tag Library
+[NSP](https://github.com/kawanet/nsp-server-pages) taglib for Seasar2 SAStruts Tag Functions
 
 - tags: `<s:form/>`, `<s:link/>` and `<s:submit/>`
 - functions: `${ f:h("abc") }` etc.
@@ -13,16 +13,19 @@
 
 ```js
 import {createNSP} from "nsp-server-pages";
-import {fFunctions, sTags} from "nsp-seasar2-taglib";
+import {fFunctions} from "nsp-seasar2-taglib";
 
 const nsp = createNSP();
 
 nsp.addTagLib({ns: "f", fn: fFunctions});
-nsp.addTagLib({ns: "s", tag: sTags});
 
 const render = await nsp.loadJSP("path/to/template.jsp");
 
-console.log(await render({...}));
+const context = {};
+
+const html = await render(context);
+
+console.log(html);
 ```
 
 ## COMMONJS
@@ -34,6 +37,23 @@ const {createNSP} = require("nsp-server-pages");
 const {fFunctions, sTags} = require("nsp-seasar2-taglib");
 ```
 
+## COMPATIBILITY
+
+SA-Struts' `${f:xxx()}` functions are implemented.
+`<s:form/>`, `<s:link/>` and `<s:submit/>` tags are not implemented yet.
+Contributions for missing features are welcome here!
+
+| Function                                            | Status            | Note                         |
+|-----------------------------------------------------|-------------------|------------------------------|
+| `${f:h(input)}`                                     | 👍 OK             |                              |
+| `${f:u(input)}`                                     | 👍 OK             |                              |
+| `${f:date(input, pattern)}`                         | 🕑 Not yet        | `yyyyMMdd` is only supported |
+| `${f:number(input, pattern)}`                       | 👍 OK             |                              |
+| `${f:br(input)}`                                    | 👍 OK             |                              |
+| `${f:nbsp(input)}`                                  | 👍 OK             |                              |
+| `${f:url(input)}`                                   | 🕑 Not yet        |                              |
+| `${f:label(value, dataList, valueName, labelName)}` | 👍 OK             |                              |
+\
 ## LINKS
 
 - https://github.com/kawanet/nsp-server-pages
