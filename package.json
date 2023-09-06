@@ -1,7 +1,7 @@
 {
   "name": "nsp-seasar2-taglib",
   "description": "NSP taglib for Seasar2 SAStruts Tag Library",
-  "version": "0.2.0",
+  "version": "0.2.3",
   "author": "@kawanet",
   "bugs": {
     "url": "https://github.com/kawanet/nsp-seasar2-taglib/issues"
@@ -11,9 +11,9 @@
   },
   "devDependencies": {
     "@types/mocha": "^10.0.1",
-    "@types/node": "^20.5.6",
+    "@types/node": "^20.5.9",
     "mocha": "^10.2.0",
-    "nsp-server-pages": "^0.2.0",
+    "nsp-server-pages": "^0.2.3",
     "typescript": "^5.2.2"
   },
   "exports": {
