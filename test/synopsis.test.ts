@@ -1,6 +1,6 @@
 import {strict as assert} from "assert";
 import {createNSP} from "nsp-server-pages";
-import {fFunctions, sTags} from "../index.js";
+import {fFunctions} from "../index.js";
 
 const TITLE = "synopsis.test.ts";
 
@@ -12,7 +12,6 @@ describe(TITLE, () => {
         const nsp = createNSP();
 
         nsp.addTagLib({ns: "f", fn: fFunctions});
-        nsp.addTagLib({ns: "s", tag: sTags});
 
         const render = await nsp.loadJSP("test/resources/synopsis1.jsp");
 
